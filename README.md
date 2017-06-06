@@ -1,4 +1,31 @@
-# Coffeekraken s-{component-name}-component <small>{version}</small> [![Build Status](https://travis-ci.org/Coffeekraken/s-{component-name}-component.svg)](https://travis-ci.org/Coffeekraken/s-{component-name}-component)
+# Coffeekraken s-{component-name}-component <img src=".resources/coffeekraken-logo.jpg" height="25px" />
+
+<p>
+	<a href="https://travis-ci.org/{repository-path}">
+		<img src="https://img.shields.io/travis/{repository-path}.svg?style=flat-square" />
+	</a>
+	<a href="https://www.npmjs.com/package/{npm-package-name}">
+		<img src="https://img.shields.io/npm/v/{npm-package-name}.svg?style=flat-square" />
+	</a>
+	<a href="https://github.com/{repository-path}/blob/master/LICENSE.txt">
+		<img src="https://img.shields.io/npm/l/{npm-package-name}.svg?style=flat-square" />
+	</a>
+	<!-- <a href="https://github.com/{repository-path}">
+		<img src="https://img.shields.io/npm/dt/{npm-package-name}.svg?style=flat-square" />
+	</a>
+	<a href="https://github.com/{repository-path}">
+		<img src="https://img.shields.io/github/forks/{repository-path}.svg?style=social&label=Fork&style=flat-square" />
+	</a>
+	<a href="https://github.com/{repository-path}">
+		<img src="https://img.shields.io/github/stars/{repository-path}.svg?style=social&label=Star&style=flat-square" />
+	</a> -->
+	<a href="https://twitter.com/{twitter-username}">
+		<img src="https://img.shields.io/twitter/url/http/{twitter-username}.svg?style=social&style=flat-square" />
+	</a>
+	<a href="http://coffeekraken.io">
+		<img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=flat-square&label=coffeekraken.io&colorB=f2bc2b&style=flat-square" />
+	</a>
+</p>
 
 {component-description}
 
@@ -9,7 +36,7 @@
 3. [Get Started](#readme-get-started)
 4. [Javascript API](doc/js)
 5. [SASS API](doc/sass)
-6. [Sugar Web Components Documentation](https://github.com/Coffeekraken/sugar/blob/master/doc/webcomponent.md)
+6. [Sugar Web Components Documentation](https://github.com/coffeekraken/sugar/blob/master/doc/webcomponent.md)
 7. [Browsers support](#readme-browsers-support)
 8. [Contribute](#readme-contribute)
 9. [Who are Coffeekraken?](#readme-who-are-coffeekraken)
@@ -40,11 +67,9 @@ Then simply use it inside your html like so:
 <a id="readme-browsers-support"></a>
 ## Browsers support
 
-* Chrome *(latest 2)*
-* Firefox *(latest 2)*
-* Internet Explorer 10+
-* Opera *(latest 2)*
-* Safari *(latest 2)*
+| <img src="https://raw.githubusercontent.com/godban/browsers-support-badges/master/src/images/edge.png" alt="IE / Edge" width="16px" height="16px" /></br>IE / Edge | <img src="https://raw.githubusercontent.com/godban/browsers-support-badges/master/src/images/firefox.png" alt="Firefox" width="16px" height="16px" /></br>Firefox | <img src="https://raw.githubusercontent.com/godban/browsers-support-badges/master/src/images/chrome.png" alt="Chrome" width="16px" height="16px" /></br>Chrome | <img src="https://raw.githubusercontent.com/godban/browsers-support-badges/master/src/images/safari.png" alt="Safari" width="16px" height="16px" /></br>Safari |
+| --------- | --------- | --------- | --------- |
+| IE11+ | last 2 versions| last 2 versions| last 2 versions
 
 > As browsers are automatically updated, we will keep as reference the last two versions of each but this component can work on older ones as well.
 
