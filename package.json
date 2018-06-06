@@ -9,28 +9,32 @@
     "url": "https://github.com/coffeekraken/s-{component-name}-component"
   },
   "watch": {
-    "dist:js": {
-      "paths": "src/**/*.js"
-    },
     "doc:js": {
       "paths": "src/**/*.js"
     },
     "doc:css": {
       "paths": "src/**/*.scss"
     },
-    "demo": {
-      "paths": "code-playground.config.js"
+    "demo:js": {
+      "paths": "demo/src/**/*.js"
+    },
+    "demo:css": {
+      "paths": "demo/src/**/*.scss"
     }
   },
   "scripts": {
     "dist": "npm run dist:js",
-    "dist:js": "babel src -d dist",
-    "demo": "coffeekraken-code-playground",
+    "dist:js": "babel src -d dist --watch",
+    "playground": "coffeekraken-code-playground",
+    "demo": "rm -rf demo/dist && npm run demo:js && npm run demo:css && run demo:server",
+    "demo:js": "webpack",
+    "demo:css": "node-sass demo/src/sass/style.scss demo/dist/css/style.css  --include-path node_modules --output-style expanded",
+    "demo:server": "http-server demo",
     "doc": "rm -rf doc && npm run doc:js && npm run doc:css",
     "doc:js": "coffeekraken-docblock-to-markdown -f 'src/**/*.js' -d doc --remove-path src/",
     "doc:css": "coffeekraken-docblock-to-markdown -f 'src/**/*.scss' -d doc --remove-path src/",
-    "test": "karma start",
-    "start": "coffeekraken-scripts-stack -i dist -i start",
+    "start": "coffeekraken-scripts-stack dist:js demo:server",
+    "test": "jest",
     "changelog": "git-changelog --version_name $npm_package_version  --app_name $npm_package_name --intro \"$npm_package_description\" --logo \".resources/coffeekraken-logo.jpg\""
   },
   "keywords": [
@@ -51,30 +55,31 @@
     }
   ],
   "license": "MIT",
+  "jest": {
+    "roots": [
+      "tests"
+    ]
+  },
   "dependencies": {
     "coffeekraken-sugar": "^1.0.5"
   },
   "devDependencies": {
+    "@webcomponents/webcomponentsjs": "^2.0.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
+    "babel-jest": "^23.0.1",
     "babel-loader": "^7.1.4",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-export-default": "^7.0.0-alpha.20",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-polyfill": "^6.23.0",
     "babel-preset-env": "^1.7.0",
-    "chai": "^3.5.0",
     "coffeekraken-code-playground": "^1.0.0",
     "coffeekraken-docblock-to-markdown": "^1.0.0",
-    "coffeekraken-s-typography-component": "^1.0.0",
     "coffeekraken-scripts-stack": "^1.0.1",
     "git-changelog": "^1.1.2",
-    "http-server": "^0.9.0",
-    "karma": "^2.0.2",
-    "karma-mocha": "^1.3.0",
-    "karma-mocha-reporter": "^2.2.5",
-    "karma-phantomjs-launcher": "^1.0.4",
-    "karma-webpack": "^3.0.0",
+    "http-server": "^0.11.1",
+    "jest": "^23.1.0",
     "node-sass": "^4.0.0",
     "webcomponents.js": "^0.7.24",
     "webpack": "^4.0.0"
