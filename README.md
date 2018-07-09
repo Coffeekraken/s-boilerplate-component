@@ -1,9 +1,9 @@
 # Coffeekraken s-{component-name}-component <img src=".resources/coffeekraken-logo.jpg" height="25px" />
 
 <p>
-	<a href="https://travis-ci.org/{repository-path}">
+	<!-- <a href="https://travis-ci.org/{repository-path}">
 		<img src="https://img.shields.io/travis/{repository-path}.svg?style=flat-square" />
-	</a>
+	</a> -->
 	<a href="https://www.npmjs.com/package/{npm-package-name}">
 		<img src="https://img.shields.io/npm/v/{npm-package-name}.svg?style=flat-square" />
 	</a>

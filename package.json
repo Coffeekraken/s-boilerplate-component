@@ -83,6 +83,7 @@
     "node-sass": "^4.0.0",
     "standard": "^11.0.1",
     "webcomponents.js": "^0.7.24",
-    "webpack": "^4.0.0"
+    "webpack": "^4.0.0",
+    "webpack-cli": "^3.0.8"
   }
 }
