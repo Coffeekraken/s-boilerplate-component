@@ -34,9 +34,12 @@
     "doc:js": "coffeekraken-docblock-to-markdown -f 'src/**/*.js' -d doc --remove-path src/",
     "doc:css": "coffeekraken-docblock-to-markdown -f 'src/**/*.scss' -d doc --remove-path src/",
     "start": "coffeekraken-scripts-stack dist:js demo:server",
-    "test": "standard 'src/**/*.js' && jest",
+    "test": "standard 'src/**/*.js' && stylelint 'src/**/*.scss' && jest",
     "changelog": "git-changelog --version_name $npm_package_version  --app_name $npm_package_name --intro \"$npm_package_description\" --logo \".resources/coffeekraken-logo.jpg\""
   },
+  "pre-commit": [
+    "test"
+  ],
   "keywords": [
     "webcomponent",
     "component",
@@ -81,7 +84,10 @@
     "http-server": "^0.11.1",
     "jest": "^23.3.0",
     "node-sass": "^4.0.0",
+    "pre-commit": "^1.2.2",
     "standard": "^11.0.1",
+    "stylelint": "^9.3.0",
+    "stylelint-config-standard": "^18.2.0",
     "webcomponents.js": "^0.7.24",
     "webpack": "^4.0.0",
     "webpack-cli": "^3.0.8"

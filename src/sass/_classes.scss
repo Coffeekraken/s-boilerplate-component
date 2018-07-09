@@ -13,19 +13,19 @@
  * @param 	{List<Color>} 		[$color=default primary secondary] 		The colors to generate
  */
 @mixin s-component-name-classes(
-	$colors : default primary secondary
+  $colors: default primary secondary
 ) {
-	@include s-component-name-classes-bare();
-	@include s-component-name-classes-style($colors);
+  @include s-component-name-classes-bare();
+  @include s-component-name-classes-style($colors);
 }
 
 /**
  * Print out the bare component css
  */
 @mixin s-component-name-classes-bare() {
-	@include s-component('s-component-name') {
-
-	}
+  @include s-component('s-component-name') {
+    /* something */
+  }
 }
 
 /**
@@ -33,14 +33,19 @@
  * @param 	{List<Color>} 		[$color=default primary secondary] 		The colors to generate
  */
 @mixin s-component-name-classes-style(
-	$colors : default primary secondary
+  $colors: default primary secondary
 ) {
-	@include s-component('s-component-name') {
-		@each $color in $colors {
-			$sel : ".#{s-component()}--#{$color}";
-			#{s-selector($sel)} {
+  @include s-component('s-component-name') {
+    @each $color in $colors {
+      $sel : ".#{s-component()}--#{$color}";
 
-			}
-		}
-	}
+      @if $color == default {
+        $sel : ".#{s-component()}";
+      }
+
+      #{s-selector($sel)} {
+        /* something */
+      }
+    }
+  }
 }
