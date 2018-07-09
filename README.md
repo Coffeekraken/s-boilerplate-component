@@ -38,9 +38,10 @@
 5. [SASS API](doc/sass)
 6. [Sugar Web Components Documentation](https://github.com/coffeekraken/sugar/blob/master/doc/webcomponent.md)
 7. [Browsers support](#readme-browsers-support)
-8. [Contribute](#readme-contribute)
-9. [Who are Coffeekraken?](#readme-who-are-coffeekraken)
-10. [Licence](#readme-license)
+8. [Code linting](#readme-code-linting)
+9. [Contribute](#readme-contribute)
+10. [Who are Coffeekraken?](#readme-who-are-coffeekraken)
+11. [Licence](#readme-license)
 
 <a name="readme-install"></a>
 ## Install
@@ -74,6 +75,16 @@ Then simply use it inside your html like so:
 > As browsers are automatically updated, we will keep as reference the last two versions of each but this component can work on older ones as well.
 
 > The webcomponent API (custom elements, shadowDOM, etc...) is not supported in some older browsers like IE10, etc... In order to make them work, you will need to integrate the [corresponding polyfill](https://www.webcomponents.org/polyfills).
+
+<a id="readme-code-linting"></a>
+##  Code linting
+
+This package uses some code linting rules. Here's the list:
+
+1. [StandardJS](https://standardjs.com/) for javascript files
+2. [Stylelint](https://github.com/stylelint/stylelint) with [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard) for `scss` files
+
+> Your commits will not been accepted if the code style is not respected!
 
 <a id="readme-contribute"></a>
 ## Contribute
