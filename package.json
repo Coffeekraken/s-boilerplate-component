@@ -34,11 +34,15 @@
     "doc:js": "coffeekraken-docblock-to-markdown -f 'src/**/*.js' -d doc --remove-path src/",
     "doc:css": "coffeekraken-docblock-to-markdown -f 'src/**/*.scss' -d doc --remove-path src/",
     "start": "coffeekraken-scripts-stack dist:js demo:server",
-    "test": "standard 'src/**/*.js' && stylelint 'src/**/*.scss' && jest",
+    "test": "jest",
+    "lint": "npm run lint:js && npm run lint:css",
+    "lint:js": "standard 'src/**/*.js'",
+    "lint:css": "stylelint 'src/sass/**/*.scss'",
     "changelog": "git-changelog --version_name $npm_package_version  --app_name $npm_package_name --intro \"$npm_package_description\" --logo \".resources/coffeekraken-logo.jpg\""
   },
   "pre-commit": [
-    "test"
+    "test",
+    "lint"
   ],
   "keywords": [
     "webcomponent",
