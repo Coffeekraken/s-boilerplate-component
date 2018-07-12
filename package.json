@@ -83,6 +83,7 @@
     "babel-preset-env": "^1.7.0",
     "coffeekraken-code-playground": "^1.0.0",
     "coffeekraken-docblock-to-markdown": "^1.0.0",
+    "coffeekraken-s-typography-component": "^1.0.1",
     "coffeekraken-scripts-stack": "^1.0.1",
     "git-changelog": "^1.1.2",
     "http-server": "^0.11.1",
