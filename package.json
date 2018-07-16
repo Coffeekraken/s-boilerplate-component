@@ -33,7 +33,7 @@
     "doc": "rm -rf doc && npm run doc:js && npm run doc:css",
     "doc:js": "coffeekraken-docblock-to-markdown -f 'src/**/*.js' -d doc --remove-path src/",
     "doc:css": "coffeekraken-docblock-to-markdown -f 'src/**/*.scss' -d doc --remove-path src/",
-    "start": "coffeekraken-scripts-stack dist:js demo:server",
+    "start": "coffeekraken-scripts-stack dist:js demo:server -i dist -i start -i demo",
     "test": "jest",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "standard 'src/**/*.js'",
