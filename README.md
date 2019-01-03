@@ -27,7 +27,7 @@
 	</a>
 </p>
 
-{component-description}
+<p class="lead">{component-description}</p>
 
 ## Table of content
 
