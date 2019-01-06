@@ -1,5 +1,5 @@
-describe('component', () => {
-	it('Should be a nice component', (done) => {
-		done()
-	})
+describe("component", () => {
+  it("Should be a nice component", done => {
+    done()
+  })
 })

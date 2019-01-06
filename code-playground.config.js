@@ -3,23 +3,21 @@ module.exports = {
   port: 3000,
 
   // title
-  title: 's-{component-name}-component',
+  title: "s-{component-name}-component",
 
   // layout
-  layout: 'right',
+  layout: "right",
 
   // compile server
   compileServer: {
-
     // compile server port
     port: 4000
-
   },
 
   // editors
   editors: {
     html: {
-      language: 'html',
+      language: "html",
       data: `
         <h1 class="h3 m-b-small">
           Coffeekraken s-{component-name}-component
@@ -31,7 +29,7 @@ module.exports = {
       `
     },
     css: {
-      language: 'sass',
+      language: "scss",
       data: `
         @import 'node_modules/coffeekraken-sugar/index';
         @import 'node_modules/coffeekraken-s-typography-component/index';
@@ -45,7 +43,7 @@ module.exports = {
       `
     },
     js: {
-      language: 'js',
+      language: "js",
       data: `
         import Component from './dist/index'
       `

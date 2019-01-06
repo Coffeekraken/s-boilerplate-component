@@ -1,4 +1,4 @@
-import SWebComponent from 'coffeekraken-sugar/js/core/SWebComponent'
+import SWebComponent from "coffeekraken-sugar/js/core/SWebComponent"
 
 export default class Component extends SWebComponent {
   /**
@@ -6,9 +6,8 @@ export default class Component extends SWebComponent {
    * @definition    SWebComponent.defaultProps
    * @protected
    */
-  static get defaultProps () {
-    return {
-    }
+  static get defaultProps() {
+    return {}
   }
 
   /**
@@ -16,7 +15,7 @@ export default class Component extends SWebComponent {
    * @definition    SWebComponent.physicalProps
    * @protected
    */
-  static get physicalProps () {
+  static get physicalProps() {
     return []
   }
 
@@ -24,7 +23,7 @@ export default class Component extends SWebComponent {
    * Css
    * @protected
    */
-  static defaultCss (componentName, componentNameDash) {
+  static defaultCss(componentName, componentNameDash) {
     return `
       ${componentNameDash} {
         display : block;
@@ -37,7 +36,7 @@ export default class Component extends SWebComponent {
    * @definition    SWebComponent.componentWillMount
    * @protected
    */
-  componentWillMount () {
+  componentWillMount() {
     super.componentWillMount()
   }
 
@@ -46,7 +45,7 @@ export default class Component extends SWebComponent {
    * @definition    SWebComponent.componentMount
    * @protected
    */
-  componentMount () {
+  componentMount() {
     super.componentMount()
   }
 
@@ -55,7 +54,7 @@ export default class Component extends SWebComponent {
    * @definition    SWebComponent.componentUnmount
    * @protected
    */
-  componentUnmount () {
+  componentUnmount() {
     super.componentUnmount()
   }
 
@@ -64,9 +63,8 @@ export default class Component extends SWebComponent {
    * @definition    SWebComponent.componentWillReceiveProp
    * @protected
    */
-  componentWillReceiveProp (name, newVal, oldVal) {
-    switch (name) {
-    }
+  componentWillReceiveProp(name, newVal, oldVal) {
+    super.componentWillReceiveProp(name, newVal, oldVal)
   }
 
   /**
@@ -75,7 +73,7 @@ export default class Component extends SWebComponent {
    * @definition    SWebComponent.render
    * @protected
    */
-  render () {
+  render() {
     super.render()
   }
 }
