@@ -29,7 +29,7 @@
 
 <p class="lead">{component-description}</p>
 
-[![View demo](http://components.coffeekraken.io/assets/img/view-demo.png)](http://components.coffeekraken.io/app/{component-name}-component)
+[![View demo](http://components.coffeekraken.io/assets/img/view-demo.png)](http://components.coffeekraken.io/app/s-{component-name}-component)
 
 ## Table of content
 
@@ -60,7 +60,7 @@ npm install coffeekraken-s-{component-name}-component --save
 First, import the component into your javascript file like so:
 
 ```js
-import ComponentName from "coffeekraken-s-{component-name}-component"
+import ComponentName from 'coffeekraken-s-{component-name}-component'
 ```
 
 Then simply use it inside your html like so:
@@ -87,7 +87,7 @@ Then simply use it inside your html like so:
 
 This package uses some code linting rules. Here's the list:
 
-1. [StandardJS](https://standardjs.com/) for javascript files
+1. [ESLint](https://eslint.org/) with [airbnb](https://www.npmjs.com/package/eslint-config-airbnb) and [prettier](https://github.com/prettier/eslint-config-prettier) rules for javascript files
 2. [Stylelint](https://github.com/stylelint/stylelint) with [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard) for `scss` files
 
 > Your commits will not been accepted if the code style is not respected!
@@ -117,4 +117,4 @@ We try to be **some cool guys** that build **some cool tools** to make our (and 
 
 ## License
 
-The code is available under the [MIT license](LICENSE.txt). This mean that you can use, modify, or do whatever you want with it. This mean also that it is shipped to you for free, so don't be a hater and if you find some issues, etc... feel free to [contribute](https://github.com/Coffeekraken/coffeekraken/blob/master/contribute.md) instead of sharing your frustrations on social networks like an asshole...
+The code is available under the [MIT license](LICENSE). This mean that you can use, modify, or do whatever you want with it. This mean also that it is shipped to you for free, so don't be a hater and if you find some issues, etc... feel free to [contribute](https://github.com/Coffeekraken/coffeekraken/blob/master/contribute.md) instead of sharing your frustrations on social networks like an asshole...
